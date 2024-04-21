@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NotepadClone (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "NotepadClone (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
