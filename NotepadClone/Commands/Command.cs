@@ -15,7 +15,7 @@ namespace NotepadClone.Commands
         public Command(DocumentViewModel vm)
         {
             // このクラスが直接初期化された場合、例外を投げる
-            if ((this.GetType() == typeof(Command)))
+            if (this.GetType() == typeof(Command))
                 throw new Exception($"{nameof(Command)} cannot be instantiated directly.");
 
             if (vm is null) 
