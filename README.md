@@ -1,2 +1,3 @@
 # NotepadClone
-A Notepad Application that is using WinUI and MVVM
+A Notepad Application using WinUI and MVVM
+This project is still in development
