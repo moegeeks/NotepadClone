@@ -34,9 +34,9 @@ namespace NotepadClone.Controls
             PInvoke.SetWindowSubclass((HWND)Handle, _subclassProc, UIntPtr.Zero, UIntPtr.Zero);
         }
         
-        private LRESULT CustomSubClassProc(HWND hWnd, uint Msg, WPARAM wParam, LPARAM lParam, nuint uIdSubclass, nuint dwRefData)
+        private LRESULT CustomSubClassProc(HWND hWnd, uint uMsg, WPARAM wParam, LPARAM lParam, nuint uIdSubclass, nuint dwRefData)
         {
-            switch (Msg)
+            switch (uMsg)
             {
                 case 16: // WM_CLOSE
                     if (this.Closing is not null)
@@ -50,7 +50,7 @@ namespace NotepadClone.Controls
             }
 
             // 引っかからなかったら元を呼ぶ
-            return PInvoke.DefSubclassProc(hWnd, Msg, wParam, lParam);
+            return PInvoke.DefSubclassProc(hWnd, uMsg, wParam, lParam);
         }
 
         public bool IsClosing { get; set; }
