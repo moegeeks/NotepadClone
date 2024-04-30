@@ -44,11 +44,11 @@ namespace NotepadClone
             {
                 // Yes
                 case ContentDialogResult.Primary:
-                    e.TryCancel();
+                    e.TryClose();
                     break;
                 // No
                 case ContentDialogResult.Secondary:
-                    e.TryCancel();
+                    e.TryClose();
                     break;
                 // Cancel
                 default:
