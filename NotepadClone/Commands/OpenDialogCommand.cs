@@ -26,7 +26,7 @@ namespace NotepadClone.Commands
             };
             picker.FileTypeFilter.Add(".txt");
 
-            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            InitializeWithWindow.Initialize(picker, Controls.WindowEx.Handle);
 
             var file = await picker.PickSingleFileAsync();
             if (file is null) return;

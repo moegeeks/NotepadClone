@@ -25,7 +25,8 @@ namespace NotepadClone.Commands
             };
             picker.FileTypeChoices.Add("Plain text", new List<string>() { ".txt", ".text" });
 
-            InitializeWithWindow.Initialize(picker, WindowNative.GetWindowHandle(MainWindow.Handle));
+            // ここからControls.WindowEx.Handleを呼び出す設計は疑問が残る。後日考え直す。
+            InitializeWithWindow.Initialize(picker, Controls.WindowEx.Handle);
 
             var file = await picker.PickSaveFileAsync();
             if (file is null) return;

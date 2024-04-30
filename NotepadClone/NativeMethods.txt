@@ -1,0 +1,2 @@
+Comctl32.*
+User32.*
