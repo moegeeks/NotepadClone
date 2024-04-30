@@ -39,8 +39,8 @@ namespace NotepadClone
                 IsPrimaryButtonEnabled = true,
                 DefaultButton = ContentDialogButton.Primary,
             };
-
-            switch (await dialog.ShowAsync())
+            var dialogResult = await dialog.ShowAsync();
+            switch (dialogResult)
             {
                 // Yes
                 case ContentDialogResult.Primary:
