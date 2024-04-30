@@ -55,6 +55,7 @@ namespace NotepadClone.Controls
 
         public bool IsClosing { get; set; }
         public event EventHandler<WindowClosingEventArgs> Closing;
+
         private void OnClosing()
         {
             WindowClosingEventArgs windowClosingEventArgs = new(this);
